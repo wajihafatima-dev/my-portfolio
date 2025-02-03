@@ -1,19 +1,29 @@
-import AboutSecton from "./components/aboutSection/aboutSecton";
-import HeroSection from "./components/heroSection/HeroSection";
+import { Box } from "@mui/material";
 import Navbar from "./components/Navbar";
+import HeroSection from "./components/heroSection/HeroSection";
+import AboutSection from "./components/aboutSection/AboutSecton";
+import ServiceSection from "./components/myService/ServiceSection";
+import ProjectsSection from "./components/myWork/ProjectSection";
+import ContactSection from "./components/contactSection/contactSection";
 
 export default function Home() {
   return (
-    <main className="flex  min-h-screen">
+    <Box sx={{ minHeight: "100vh" }}>
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
+      <Box sx={{  background: "linear-gradient(to right,#6D9696,#adcced)",
+        backgroundSize: "cover",
+        objectFit:"cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        minHeight: "100vh",
+         pt:{xs:8,sm:12,md:15}, mx: "auto", px: 4, py: 2 }}>
         <HeroSection />
-        <AboutSecton />
-        {/* <AchievementsSection />
-        <ProjectsSection />
-        <EmailSection /> */}
-      </div>
+       <AboutSection />
+       <ServiceSection/>
+       <ProjectsSection/>
+       <ContactSection/>
+      </Box>
       {/* <Footer /> */}
-    </main>
+    </Box>
   );
 }

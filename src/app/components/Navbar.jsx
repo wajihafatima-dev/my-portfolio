@@ -37,7 +37,7 @@ const Navbar = () => {
         }}
       >
         <Link href="/" className="text-xl text-white font-semibold">
-          LOGO
+          Portfolio
         </Link>
         
         <Box sx={{ display: { xs: "block", md: "none" } }}>

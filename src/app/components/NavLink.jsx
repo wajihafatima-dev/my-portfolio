@@ -11,7 +11,7 @@ const NavLink = ({ href, title }) => {
           paddingY:{ lg:0, md:0,sm:1,xs:1},
           
           color: "#ADB7BE",
-          fontSize: "1rem", // Adjust font size as needed
+          fontSize: "1rem", 
           "&:hover": {
             color: "white",
           },

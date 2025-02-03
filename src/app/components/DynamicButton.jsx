@@ -19,7 +19,7 @@ const DynamicButton = ({
       onClick={onClick}
       startIcon={startIcon}
       endIcon={endIcon}
-      href={href} // Dynamically add href
+      href={href} 
       sx={{
         fontFamily: "-moz-initial",
         paddingX: { xs: 2, sm: 4 },

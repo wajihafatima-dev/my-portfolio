@@ -24,7 +24,15 @@ const HeroSectionContant = () => {
           fontSize: { md: 40, sm: 38, xs: 36 },
           textAlign: "center",
           paddingY: 1,
+          color: "#36404a", 
+          mb: 2 ,
+          cursor:"pointer",
+          "&:hover": {
+            transform: "scale(1.04)", 
+            transition: "all 0.3s ease",
+          },
         }}
+        fontWeight="bold"
       >
         Frontend Web Developer
       </Typography>
@@ -60,7 +68,7 @@ const HeroSectionContant = () => {
             borderRadius: "50px",
             paddingX: { xs: 2, sm: 4 },
             "&:hover": {
-              backgroundColor: "#333",
+              backgroundColor: "#36404a",
               transform: "scale(1.05)", 
               transition: "all 0.3s ease",
             },
@@ -72,13 +80,15 @@ const HeroSectionContant = () => {
         label={"My Resume"}
           variant="outlined"
           sx={{
-            color: "#000",
+            color: "#fff",
             borderColor: "#000",
+            backgroundColor:"#36404a",
             width: { xs: "100%", sm: "auto" },
             borderRadius: "50px",
             "&:hover": {
-              backgroundColor: "#f5f5f5", 
+              backgroundColor: "#adcced", 
               borderColor: "#333", 
+              color:"#000",
               transform: "scale(1.05)", 
               transition: "all 0.3s ease",
             },
