@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Box sx={{ minHeight: "100vh" }}>
       <Navbar />
-      <Box sx={{  background: "linear-gradient(to right,#6D9696,#adcced)",
+      <Box sx={{    backgroundImage: "url('/assets/blue.jpg')",
         backgroundSize: "cover",
         objectFit:"cover",
         backgroundPosition: "center",

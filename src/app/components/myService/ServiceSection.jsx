@@ -9,7 +9,7 @@ const ServiceSection = () => {
       data-aos="zoom-in-up"
       sx={{
         px: { xs: 2, sm: 4, md: 6 },
-        pt: { xs: 4, sm: 12,md:0 },
+        pt: { xs: 4, sm: 12,md:20 },
         textAlign: "center",
       }}
     >

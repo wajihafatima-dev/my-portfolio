@@ -9,7 +9,7 @@ const ProjectsSection = () => {
     <Box
       sx={{
         paddingX: { xs: 1, sm: 3, md: 7 },
-        paddingTop: { xs: 4, sm: 20 },
+        paddingTop: { xs: 4, sm: 15 },
         textAlign: "center",
       }}
       id="mywork"

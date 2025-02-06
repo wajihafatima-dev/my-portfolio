@@ -7,7 +7,7 @@ const ContactSection = () => {
   return (
     <Box sx={{ paddingX: { xs: 1, sm: 5, md: 10 }, textAlign: "center",paddingTop: {md: 4, lg:20 },paddingBottom:{xs:4,sm:16} }}
     id="contact">
-     <Grid container spacing={4} justifyContent="center" alignItems="center">
+     <Grid container spacing={2} justifyContent="center" alignItems="center">
        <ContactContent/>
         <ContactForm/>
         </Grid>
