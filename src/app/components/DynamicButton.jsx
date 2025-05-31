@@ -2,7 +2,7 @@ import React from "react";
 import { Button as MuiButton } from "@mui/material";
 
 const DynamicButton = ({
-  label,
+  label="text",
   variant = "contained",
   color = "primary",
   onClick,
@@ -21,6 +21,7 @@ const DynamicButton = ({
       endIcon={endIcon}
       href={href} 
       sx={{
+        textTransform: "lowercase",
         fontFamily: "-moz-initial",
         paddingX: { xs: 2, sm: 4 },
         ...sx,

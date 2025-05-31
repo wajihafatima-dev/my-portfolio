@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./NavLink";
 import { NAV_LINKS } from "../constants/PAGE_CONSTANT";
 import Menu from "./Menu";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -79,20 +78,7 @@ const Navbar = () => {
             width: "auto",
           }}
         >
-          <List sx={{ display: "flex",paddingRight:5, margin: 0 }}>
-            {NAV_LINKS.map((link, index) => (
-              <ListItem
-                key={index}
-                sx={{ 
-                  "&:hover": {
-                    backgroundColor: "rgba(255, 255, 255, 0.1)", 
-                  },
-                }}
-              >
-                <NavLink href={link.path} title={link.title} />
-              </ListItem>
-            ))}
-          </List>
+          
         </Box>
       </Box>
       {navbarOpen && <Menu links={NAV_LINKS} />}

@@ -1,17 +1,17 @@
 import React from "react";
 import { Box, Grid, Typography, Card, CardContent } from "@mui/material";
-import { PROJECTS_DATA } from "../../constants/PAGE_CONSTANT";
+import { PROJECTS_SECTION_DATA } from "../../constants/PAGE_CONSTANT";
 import DynamicButton from "../DynamicButton";
 import NearMeRoundedIcon from "@mui/icons-material/NearMeRounded";
 
 const ProjectsSection = () => {
   return (
     <Box
-      sx={{
-        paddingX: { xs: 1, sm: 3, md: 7 },
-        paddingTop: { xs: 4, sm: 15 },
-        textAlign: "center",
-      }}
+    data-aos="zoom-in-up"
+    sx={{
+      px: { xs: 2, sm: 4, md: 6 },
+      textAlign: "center",
+    }}
       id="mywork"
     >
       <Typography variant="h4" fontWeight="bold" sx={{ color: "#333", mb: 2 }}>
@@ -22,18 +22,19 @@ const ProjectsSection = () => {
         more details.
       </Typography>
 
-      <Grid container spacing={3} justifyContent="center">
-        {PROJECTS_DATA.map((project, index) => (
-          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+      <Grid container spacing={4} justifyContent="center">
+        {PROJECTS_SECTION_DATA.map((project, index) => (
+           <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <Card
              data-aos="zoom-in"
               sx={{
+                width:"100%",
                 margin: "auto",
                 boxShadow: 3,
                 backgroundImage: `url(${project.imageUrl})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                height: 350,
+                height: 300,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "flex-end",

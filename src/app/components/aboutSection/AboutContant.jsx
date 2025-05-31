@@ -1,16 +1,42 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
+import { TITLE_STYLE } from "@/app/constants/PAGE_CONSTANT";
 
-const AboutContant = () => {
+const AboutContant = ({ title, sections, styles }) => {
+  const {
+    sectionDescriptionStyle,
+    sectionTitleStyle,
+    verticalLineStyle,
+    iconBox,
+    titleStyle,
+  } = styles || {};
+
   return (
-    <Box >
-      <Typography variant="h4" fontWeight="bold" sx={{ color: "#333", mb: 2 ,textShadow: "2px 2px 8px #adcced",}}>
-        About Me
+    <Box data-aos="fade-left">
+      <Typography variant="h4" fontWeight="bold" sx={TITLE_STYLE}>
+        {title}
       </Typography>
-      <Typography variant="body1" gutterBottom>
-      I am a dedicated Web Developer Proficient in HTML, CSS, JavaScript, React.js, and Next.js with
-        extensive experience in building dynamic web applications and portals
-      </Typography>
+      {sections.map((section, index) => (
+        <Box
+          key={index}
+          sx={{
+            position: "relative",
+            pl: 6,
+          }}
+        >
+          <Box sx={iconBox}>
+            <ShieldOutlinedIcon fontSize="small" />
+          </Box>
+          <Box sx={verticalLineStyle}></Box>
+          <Typography variant="h5" fontWeight="bold" sx={sectionTitleStyle}>
+            {section.title}
+          </Typography>
+          <Typography variant="body1" sx={sectionDescriptionStyle}>
+            {section.content}
+          </Typography>
+        </Box>
+      ))}
     </Box>
   );
 };

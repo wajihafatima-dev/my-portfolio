@@ -3,23 +3,29 @@ import Image from "next/image";
 
 const HeroImage = () => {
   return (
-    <Box
-      sx={{
-        width: { xs: "130px", lg: "180px" },
-        height: { xs: "130px", lg: "180px" }, 
-        borderRadius: "50%", 
-        position: "relative",
-        overflow: "hidden", 
-      }}
-    >
-      <Image
-        src="/images/my-img.jpg" 
-        alt="Hero Image"
-        objectFit="fit" 
-        style={{ position: "absolute", top: 0, left: 0 }} 
-        width={300}
-        height={100}
-      />
+      <Box
+        sx={{
+          width: 200,
+          height: 200,
+          borderRadius: "50%",
+          overflow: "hidden",
+          transition: "transform 0.4s ease",
+          "&:hover": {
+            transform: "scale(1.07)",
+          },
+        }}
+      >
+        <Image
+          src="/assets/about-img.png"
+          alt="Hero Image"
+          width={300}
+          height={300}
+          style={{
+            objectFit: "fit",
+            width: "100%",
+            height: "100%",
+          }}
+        />
     </Box>
   );
 };

@@ -1,48 +1,23 @@
 import { Box } from "@mui/material";
-import Image from "next/image";
 import AboutContant from "./AboutContant";
-import AboutCards from "./AboutCards";
 
-const AboutSection = () => {
+const AboutSection = ({ data }) => {
+  const { title, sections, styles } = data || {};
+  const { mainBox, gridBox, imageStyle } = styles || {};
+  
   return (
-    <Box
-      component="section"
-      sx={{
-        color: "#000",
-        paddingTop: { xs: 4, sm:5 ,md:15}, 
-      }}
-      id="about"
-    >
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: { md: "1fr 1.4fr", xs: "1fr" },
-          alignItems: "center",
-          paddingRight:{sm:0,md:16}
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-          data-aos="flip-left"
-        >
-          <Image
-            src="/images/my-img.jpg"
-            width={250}
-            height={200}
+    <Box sx={mainBox} id="about">
+      <Box sx={gridBox}>
+          <Box
+            component="img"
+            src="/assets/about-img.png"
             alt="About Me"
-            style={{
-              objectFit: "cover",
-            }}
+            width={450}
+            height={450}
+            sx={imageStyle}
           />
-        </Box>
-
-        <Box sx={{ textAlign: "left", width: { xs: "100%", sm: "auto" } }}>
-          <AboutContant />
-          <AboutCards />
+        <Box sx={{ overflow: "hidden"  }}>
+            <AboutContant title={title} sections={sections} styles={styles} />
         </Box>
       </Box>
     </Box>

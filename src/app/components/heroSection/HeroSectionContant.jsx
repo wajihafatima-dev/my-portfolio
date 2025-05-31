@@ -5,32 +5,24 @@ import DynamicButton from "../DynamicButton";
 
 const HeroSectionContant = () => {
   return (
-    <Box>
+    <Box sx={{width:"100%" }} >
       <Typography
         variant="body1"
         sx={{
-          fontFamily: "-moz-initial",
           fontSize: "1.5rem",
           textAlign: "center",
-          paddingY: 1,
+          color: "#fff",
         }}
       >
         Hi! I’m Wajiha Mukhtar
       </Typography>
       <Typography
-        variant="h3"
         sx={{
-          fontFamily: "-moz-initial",
-          fontSize: { md: 40, sm: 38, xs: 36 },
+          fontSize: { xs: 34, sm: 38, md: 47 },
           textAlign: "center",
-          paddingY: 1,
-          color: "#36404a", 
-          mb: 2 ,
-          cursor:"pointer",
-          "&:hover": {
-            transform: "scale(1.04)", 
-            transition: "all 0.3s ease",
-          },
+          paddingY: 2,
+          color: "#e066ff",
+         textShadow:"0 4px 15px #AD00B1"
         }}
         fontWeight="bold"
       >
@@ -39,10 +31,11 @@ const HeroSectionContant = () => {
       <Typography
         variant="h6"
         sx={{
-          fontFamily: "-moz-initial",
           fontSize: "1rem",
           textAlign: "center",
           display: "flex",
+          color:"#fff",
+          px:1,
           justifyContent: "center",
         }}
       >
@@ -59,38 +52,24 @@ const HeroSectionContant = () => {
         }}
       >
         <DynamicButton
-        label={"Connect with me"}
-          variant="contained"
-          sx={{
-            width: { xs: "100%", sm: "auto" },
-            backgroundColor: "#000",
-            color: "#fff",
-            borderRadius: "50px",
-            paddingX: { xs: 2, sm: 4 },
-            "&:hover": {
-              backgroundColor: "#36404a",
-              transform: "scale(1.05)", 
-              transition: "all 0.3s ease",
-            },
-          }}
-          href="mailto:wajihafatima689@gmail.com"
-        />
-
-        <DynamicButton
-        label={"My Resume"}
+          label={"My Resume"}
           variant="outlined"
           sx={{
             color: "#fff",
             borderColor: "#000",
-            backgroundColor:"#36404a",
-            width: { xs: "100%", sm: "auto" },
+            paddingX: { xs: 2, sm: 4, md: 6 },
+            fontSize: { xs: 15, sm: 15, md: 18 },
+            backgroundColor: "#A16BBE",
+            width: { xs: "60%", sm: "auto" },
             borderRadius: "50px",
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.8)", 
+            transition: "all 0.3s ease",
             "&:hover": {
-              backgroundColor: "#adcced", 
-              borderColor: "#333", 
-              color:"#000",
-              transform: "scale(1.05)", 
-              transition: "all 0.3s ease",
+              backgroundColor: "#e066ff",
+              borderColor: "#333",
+              color: "#000",
+              transform: "scale(1.05)",
+              boxShadow: "0 8px 20px rgba(224, 102, 255, 0.5)", 
             },
           }}
           href="/assets/myResume.pdf"
