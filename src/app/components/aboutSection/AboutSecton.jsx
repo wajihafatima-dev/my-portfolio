@@ -1,23 +1,34 @@
+"use client";
 import { Box } from "@mui/material";
-import AboutContant from "./AboutContant";
+import AboutContent from "./AboutContant";
 
-const AboutSection = ({ data }) => {
-  const { title, sections, styles } = data || {};
-  const { mainBox, gridBox, imageStyle } = styles || {};
-  
+const AboutSection = ({ data = {} }) => {
+  const {
+    title = "About Me",
+    sections = [],
+    styles = {},
+  } = data;
+
+  const {
+    mainBox = {},
+    gridBox = { display: "flex", gap: 2, flexWrap: "wrap" ,backgroundColor:"red"},
+    imageStyle = { maxWidth: "100%", height: "auto", borderRadius: 4 },
+  } = styles;
+
   return (
     <Box sx={mainBox} id="about">
       <Box sx={gridBox}>
-          <Box
-            component="img"
-            src="/assets/about-img.png"
-            alt="About Me"
-            width={450}
-            height={450}
-            sx={imageStyle}
-          />
-        <Box sx={{ overflow: "hidden"  }}>
-            <AboutContant title={title} sections={sections} styles={styles} />
+        <Box
+          component="img"
+          src="/assets/about-img.png"
+          alt={title || "About Image"}
+          width={430}
+          height={450}
+          loading="lazy"
+          sx={imageStyle}
+        />
+        <Box sx={{ overflow: "hidden", flex: 1 }}>
+        <AboutContent sections={sections} styles={styles} title={title}/>
         </Box>
       </Box>
     </Box>

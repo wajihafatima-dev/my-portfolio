@@ -5,9 +5,8 @@ const HeroImage = () => {
   return (
       <Box
         sx={{
-          width: 200,
-          height: 200,
-          borderRadius: "50%",
+          width: {xs:170,md:200},
+          height:  {xs:170,md:200},
           overflow: "hidden",
           transition: "transform 0.4s ease",
           "&:hover": {

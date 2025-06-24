@@ -3,7 +3,7 @@
 //   to right,
 //   #ec008c,#fc6767
 // );
-import { Box, Typography } from "@mui/material";
+import { Box, lighten, Typography } from "@mui/material";
 import {
   pink,
   yellow,
@@ -14,6 +14,9 @@ import {
   deepPurple,
   green,
   indigo,
+  cyan,
+  lightBlue,
+  lightGreen,
 } from "@mui/material/colors";
 import {
   FaReact,
@@ -144,9 +147,7 @@ export const SERVICE_SECTION_DATA = {
   styles: {
     mainBox: {
       textAlign: "center",
-      background: "linear-gradient(to right, #1D2D3B, #000)",
-      px: 6,
-      pb: 5,
+      px: { xs: 3, md: 8 },
       height: "100%",
     },
     cardStyle: {
@@ -166,7 +167,7 @@ export const SERVICE_SECTION_DATA = {
         boxShadow: `0 0 20px 6px rgb(251, 192, 45)`,
       },
     },
-    cardImg: {
+    cardIcon: {
       width: 44,
       height: 44,
       mx: "auto",
@@ -193,10 +194,7 @@ export const SKILL_SECTION_DATA = {
   styles: {
     mainBox: {
       textAlign: "center",
-      background: "linear-gradient(to right, #1D2D3B, #000)",
-      px: 6,
-      py: 5,
-      height: "100%",
+      px: { xs: 2, md: 5 },
     },
     cardStyle: {
       backgroundColor: "#131722",
@@ -248,8 +246,6 @@ export const ABOUT_SECTION_DATA = {
     mainBox: {
       color: "#000",
       minWidth: "100%",
-      height: "100%",
-      py: 5,
     },
     gridBox: {
       display: "flex",
@@ -271,8 +267,8 @@ export const ABOUT_SECTION_DATA = {
       position: "absolute",
       left: { xs: 11, md: 0 },
       top: 0,
-      width: 30,
-      height: 30,
+      width: 40,
+      height: 40,
       borderRadius: "50%",
       backgroundColor: "#6755e4",
       display: "flex",
@@ -299,59 +295,89 @@ export const ABOUT_SECTION_DATA = {
         },
       },
     },
-    verticalLineStyle: {
-      position: "absolute",
-      left: { xs: 25, md: 13 },
-      top: 20,
-      width: 30,
-      height: "80%",
-      borderLeft: "3px solid #ffffff",
+  },
+};
+export const TITLE_STYLE = {
+  background: "linear-gradient(to right, #ff00cc, #3333ff)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  display: "inline-block",
+  py: 4,
+};
+export const PROJECT_SECTION_DATA = {
+  title: "MY PROJECTS",
+  imageUrl: ["/images/picture.jpg"],
+  cardData: [
+    {
+      image: "/images/project1.jpg", // Add your image paths here
+      title: "Web Development",
+      description: "Custom website built with React, Node.js, and Firebase.",
+      projectLink: "https://example.com/project1",
     },
-    sectionTitleStyle: {
-      background: "linear-gradient(to right, #7e61ff, #adcced)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      display: "inline-block",
-      mb: 1,
+    {
+      image: "/images/picture.jpg",
+      title: "UI/UX Design",
+      description: "Clean and modern UI/UX design for a mobile app project.",
+      projectLink: "https://example.com/project2",
     },
-    sectionDescriptionStyle: {
-      fontSize: { xs: 14, sm: 16, md: 18 },
+    {
+      image: "/images/project3.jpg",
+      title: "WordPress Development",
+      description: "Developed a responsive WordPress theme with Elementor.",
+      projectLink: "https://example.com/project3",
+    },
+    {
+      image: "/images/project4.jpg",
+      title: "E-commerce Site",
+      description: "An online store with cart, payment, and admin panel.",
+      projectLink: "https://example.com/project4",
+    },
+  ],
+  badgeColors: [cyan[200], lightBlue[500], orange[700], lightGreen[600]],
+  // icon: [
+  //   "../assets/monitor.png",
+  //   "../assets/code.png",
+  //   "../assets/react.png",
+  //   "../assets/business.png",
+  // ],
+  styles: {
+    mainBox: {
+      textAlign: "center",
+      background: "linear-gradient(to right, #1D2D3B, #000)",
+      px: { xs: 3, md: 0 },
+      height: "100%",
+      pb: 5,
+    },
+    cardStyle: {
+      backgroundColor: "#131722",
+      borderRadius: "20px",
       color: "#fff",
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      minHeight: 250,
+      position: "relative",
+      overflow: "hidden",
+      padding: "1rem",
+      // boxShadow: `0 0 15px 4px rgba(0, 255, 255, 0.6)`,
+      backdropFilter: "blur(8px)",
+      border: "2px solid rgba(255, 255, 255, 0.1)",
+      transition: "all 0.4s ease-in-out",
+      transform: "scale(1)",
+      "&:hover": {
+        boxShadow: "0 0 8px 2px rgb(251, 192, 45, 0.7)",
+      },
+    },
+
+    cardImg: {
+      width: 100,
+      height: 100,
       mb: 2,
-      pr: { xs: 2, md: 0 },
+    },
+    cardTitle: {
+      color: "#e066ff",
+      mb: 1,
     },
   },
 };
-export const PROJECTS_SECTION_DATA = [
-  {
-    title: "Project One",
-    description: "Description of project one.",
-    link: "https://project-one.com",
-    imageUrl: "/images/picture.jpg",
-  },
-  {
-    title: "Project Two",
-    description: "Description of project two.",
-    link: "https://project-two.com",
-    imageUrl: "",
-  },
-  {
-    title: "Project One",
-    description: "Description of project one.",
-    link: "https://project-one.com",
-    imageUrl: "/images/picture.jpg",
-  },
-  {
-    title: "Project Two",
-    description: "Description of project two.",
-    link: "https://project-two.com",
-    imageUrl: "",
-  },
-];
-export const TITLE_STYLE={
-    background: "linear-gradient(to right, #ff00cc, #3333ff)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      display: "inline-block",
-      py: 5,
-}

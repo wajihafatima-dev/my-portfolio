@@ -1,22 +1,25 @@
+// app/layout.js
 "use client";
-import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useState, useMemo } from "react";
+import { ThemeProvider, CssBaseline, } from "@mui/material";
+import { getResponsiveTheme } from "./components/theme";
+import Sidebar from "./components/Sidebar";
 
 export default function RootLayout({ children }) {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
+  const [mode, setMode] = useState("light");
+  const theme = useMemo(() => getResponsiveTheme(mode), [mode]);
+  const toggleMode = () => {
+    setMode((prev) => (prev === "light" ? "dark" : "light"));
+  };
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: 0,
-          padding: 0,
-        }}
-      >
-        {children}
+      <body>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Sidebar mode={mode} toggleMode={toggleMode} />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

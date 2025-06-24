@@ -13,7 +13,7 @@ const HeroSection = () => {
       flexDirection:"column",
       alignItems:"center",
       justifyContent: "center",
-       minHeight: "90vh",
+      height: "100vh",
       }}
       // data-aos="fade-down"
     >

@@ -5,39 +5,39 @@ import DynamicButton from "../DynamicButton";
 
 const HeroSectionContant = () => {
   return (
-    <Box sx={{width:"100%" }} >
+    <Box sx={{ width: "100%" }}>
       <Typography
         variant="body1"
-        sx={{
+        sx={(theme) => ({
           fontSize: "1.5rem",
           textAlign: "center",
-          color: "#fff",
-        }}
+          color: theme.palette.text,
+        })}
       >
         Hi! I’m Wajiha Mukhtar
       </Typography>
       <Typography
-        sx={{
+        sx={(theme)=>({
           fontSize: { xs: 34, sm: 38, md: 47 },
           textAlign: "center",
           paddingY: 2,
-          color: "#e066ff",
-         textShadow:"0 4px 15px #AD00B1"
-        }}
+          color: theme.palette.heading.color,
+          // textShadow: "0 4px 2px #AD00B1",
+        })}
         fontWeight="bold"
       >
         Frontend Web Developer
       </Typography>
       <Typography
-        variant="h6"
-        sx={{
+        variant="text"
+        sx={(theme) => ({
           fontSize: "1rem",
           textAlign: "center",
           display: "flex",
-          color:"#fff",
-          px:1,
+          color: theme.palette.text,
+          px: 1,
           justifyContent: "center",
-        }}
+        })}
       >
         I am a dedicated Web Developer with expertise in HTML, CSS, JavaScript,
         React.js, and Next.js
@@ -56,20 +56,23 @@ const HeroSectionContant = () => {
           variant="outlined"
           sx={{
             color: "#fff",
-            borderColor: "#000",
-            paddingX: { xs: 2, sm: 4, md: 6 },
-            fontSize: { xs: 15, sm: 15, md: 18 },
-            backgroundColor: "#A16BBE",
+            border: "2px solid transparent",
+            paddingX: { xs: 2.5, sm: 4, md: 6 },
+            fontSize: { xs: 13, sm: 13, md: 14 },
             width: { xs: "60%", sm: "auto" },
-            borderRadius: "50px",
-            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.8)", 
-            transition: "all 0.3s ease",
+            borderRadius: "999px",
+            backgroundImage: "linear-gradient(90deg, #A16BBE, #E066FF)",
+            backgroundSize: "200% auto",
+            boxShadow: "0 4px 12px rgba(161, 107, 190, 0.5)",
+            transition: "all 0.4s ease-in-out",
+            fontWeight: 600,
+            letterSpacing: "0.5px",
             "&:hover": {
-              backgroundColor: "#e066ff",
-              borderColor: "#333",
-              color: "#000",
-              transform: "scale(1.05)",
-              boxShadow: "0 8px 20px rgba(224, 102, 255, 0.5)", 
+              backgroundPosition: "right center",
+              transform: "translateY(-2px) scale(1.04)",
+              boxShadow: "0 6px 18px rgba(224, 102, 255, 0.6)",
+              color: "#120061",
+              borderColor: "#fff",
             },
           }}
           href="/assets/myResume.pdf"

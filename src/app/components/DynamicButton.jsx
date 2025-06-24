@@ -9,6 +9,7 @@ const DynamicButton = ({
   startIcon,
   endIcon,
   sx,
+  target,
   href,
   ...props
 }) => {
@@ -20,6 +21,7 @@ const DynamicButton = ({
       startIcon={startIcon}
       endIcon={endIcon}
       href={href} 
+      target={target}
       sx={{
         textTransform: "lowercase",
         fontFamily: "-moz-initial",

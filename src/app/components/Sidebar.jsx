@@ -14,26 +14,25 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import NavLink from "next/link"; // Your NavLink component
-import { NAV_LINKS } from "../constants/PAGE_CONSTANT"; // Your nav links array
+import NavLink from "next/link";
+import ToggleTheme from "./ToggleTheme";
+import { NAV_LINKS } from "../constants/PAGE_CONSTANT";
 
-const Sidebar = () => {
+const Sidebar = ({ mode, toggleMode }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setMobileOpen((prev) => !prev);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{}}>
-      <IconButton sx={{ float: "right", m: 1 }}>
-        <CloseIcon />
+    <Box onClick={handleDrawerToggle} sx={{ px: 2, pt: 2}}>
+      <IconButton sx={{ float: "right" }}>
+        <CloseIcon sx={{ color: "#fff" }} />
       </IconButton>
-
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography variant="h6" sx={{ my: 3, fontWeight: "bold", color: "#fff" }}>
         My Website
       </Typography>
-
       <List>
         {NAV_LINKS.map((link, index) => (
           <ListItem key={index} disablePadding>
@@ -43,9 +42,9 @@ const Sidebar = () => {
               sx={{
                 width: "100%",
                 textTransform: "none",
-                color: "inherit",
-                // justifyContent: "flex-start",
-                px: 0,
+                color: "#fff",
+                justifyContent: "flex-start",
+                px: 2,
                 py: 1.5,
                 "&:hover": {
                   backgroundColor: "rgba(255,255,255,0.1)",
@@ -61,19 +60,10 @@ const Sidebar = () => {
   );
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexWrap: "wrap",
-        alignItems: "center",
-        justifyContent: "space-between",
-        mx: "auto",
-        px: 4,
-        py: 1,
-      }}
-    >
+    <Box>
       <AppBar
         component="nav"
+        position="fixed"
         sx={{
           background: "linear-gradient(to right, #1c1c1c, #333333)",
           boxShadow: "none",
@@ -93,7 +83,7 @@ const Sidebar = () => {
           </Link>
 
           {/* Desktop Links */}
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
             {NAV_LINKS.map((link, index) => (
               <Button
                 key={index}
@@ -101,7 +91,6 @@ const Sidebar = () => {
                 href={link.path}
                 sx={{
                   color: "#fff",
-
                   textTransform: "none",
                   fontWeight: "bold",
                 }}
@@ -109,6 +98,7 @@ const Sidebar = () => {
                 {link.title}
               </Button>
             ))}
+            <ToggleTheme mode={mode} toggleMode={toggleMode} />
           </Box>
 
           {/* Mobile Menu Button */}
@@ -124,30 +114,26 @@ const Sidebar = () => {
       </AppBar>
 
       {/* Mobile Drawer */}
-      <Box component="nav">
-        <Drawer
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile
-          }}
-          sx={{
-            display: { xs: "block", sm: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: {
-                xs: "70%", // 70% width on small screens
-                sm: "50%", // 50% width on small-medium screens
-              },
-              background: "linear-gradient(to bottom, #1c1c1c, #333333)",
-              color: "#fff",
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </Box>
+      <Drawer
+        variant="temporary"
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        ModalProps={{ keepMounted: true }}
+        sx={{
+          display: { xs: "block", sm: "none" },
+          "& .MuiDrawer-paper": {
+            boxSizing: "border-box",
+            width: { xs: "70%", sm: "50%" },
+            background: "linear-gradient(to bottom, #1c1c1c, #333333)",
+            color: "#fff",
+          },
+        }}
+      >
+        {drawer}
+        <Box sx={{ p: 2 }}>
+          <ToggleTheme mode={mode} toggleMode={toggleMode} />
+        </Box>
+      </Drawer>
     </Box>
   );
 };

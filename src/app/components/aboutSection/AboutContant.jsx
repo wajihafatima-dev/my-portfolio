@@ -1,44 +1,71 @@
-import { Box, Typography } from "@mui/material";
+"use client";
 import React from "react";
+import { Box, Typography } from "@mui/material";
 import ShieldOutlinedIcon from "@mui/icons-material/ShieldOutlined";
 import { TITLE_STYLE } from "@/app/constants/PAGE_CONSTANT";
 
-const AboutContant = ({ title, sections, styles }) => {
-  const {
-    sectionDescriptionStyle,
-    sectionTitleStyle,
-    verticalLineStyle,
-    iconBox,
-    titleStyle,
-  } = styles || {};
+const AboutContent = ({ title, sections = [], styles = {} }) => {
+  const { iconBox = {} } = styles;
 
   return (
-    <Box data-aos="fade-left">
-      <Typography variant="h4" fontWeight="bold" sx={TITLE_STYLE}>
+    <Box>
+      <Typography
+        variant="h2"
+        fontWeight="bold"
+        sx={{ pl: { xs: 2, sm: 3 }, ...TITLE_STYLE }}
+      >
         {title}
       </Typography>
+
       {sections.map((section, index) => (
         <Box
           key={index}
           sx={{
             position: "relative",
             pl: 6,
+            pb: 3,
           }}
         >
-          <Box sx={iconBox}>
-            <ShieldOutlinedIcon fontSize="small" />
+          <Box sx={{ position: "absolute", left: 0, top: 3, ...iconBox }}>
+            <ShieldOutlinedIcon fontSize="medium" />
           </Box>
-          <Box sx={verticalLineStyle}></Box>
-          <Typography variant="h5" fontWeight="bold" sx={sectionTitleStyle}>
+
+          <Box
+            sx={(theme) => ({
+              position: "absolute",
+              left: { xs: 31, md: 18},
+              top: 20,
+              width: "0px", // no width needed for a vertical line
+              height: "80%",
+              borderLeft: `2px solid ${theme.palette.text.secondary}`, // ✅ full border string
+            })}
+          />
+           <Box sx={{pl:2}}>
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            sx={(theme) => ({
+              background: theme.palette.title.color,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              display: "inline-block",
+              mb: 2,
+            })}
+          >
             {section.title}
           </Typography>
-          <Typography variant="body1" sx={sectionDescriptionStyle}>
+
+          <Typography
+            variant="body1"
+            sx={(theme) => ({ color: theme.palette.text.secondary })}
+          >
             {section.content}
           </Typography>
+        </Box>
         </Box>
       ))}
     </Box>
   );
 };
 
-export default AboutContant;
+export default AboutContent;
