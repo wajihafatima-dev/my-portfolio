@@ -5,9 +5,11 @@ const HeroImage = () => {
   return (
       <Box
         sx={{
-          width: {xs:170,md:200},
-          height:  {xs:170,md:200},
+          width: {xs:130,md:150},
+          height:  {xs:130,md:150},
           overflow: "hidden",
+          mt:6,
+          borderRadius: "50%",
           transition: "transform 0.4s ease",
           "&:hover": {
             transform: "scale(1.07)",
@@ -15,10 +17,10 @@ const HeroImage = () => {
         }}
       >
         <Image
-          src="/assets/about-img.png"
+          src="/assets/code-bg.png"
           alt="Hero Image"
-          width={300}
-          height={300}
+          width={200}
+          height={200}
           style={{
             objectFit: "fit",
             width: "100%",

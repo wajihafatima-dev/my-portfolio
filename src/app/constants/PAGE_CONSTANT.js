@@ -131,11 +131,11 @@ export const SERVICE_SECTION_DATA = {
       description:
         "Developing SEO-friendly and fast server-side rendered applications using Next.js.",
     },
-    {
-      title: "Accessibility Enhancement",
-      description:
-        "Making web applications accessible to everyone, regardless of their abilities.",
-    },
+    // {
+    //   title: "Accessibility Enhancement",
+    //   description:
+    //     "Making web applications accessible to everyone, regardless of their abilities.",
+    // },
   ],
   badgeColors: [pink[500], purple[500], yellow[700], blue[600]],
   icon: [

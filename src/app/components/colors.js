@@ -1,5 +1,6 @@
 const lightColors = {
   background: "#ffffff",
+  contactBg:"#f5f5dc",
   surface: "#FFFDF9",
   primary: "#1976d2",
   secondary: "#9c27b0",
@@ -18,6 +19,7 @@ const darkColors = {
   surface: "#1e1e1e",
   primary: "#90caf9",
   secondary: "#ce93d8",
+  contactBg:"#1e1e1e",
   textPrimary: "#ffffff",
   textSecondary: "#bbbbbb",
    headingColor: "#ce93d8",

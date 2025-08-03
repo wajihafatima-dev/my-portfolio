@@ -18,18 +18,18 @@ const AboutSection = ({ data = {} }) => {
   return (
     <Box sx={mainBox} id="about">
       <Box sx={gridBox}>
+        <Box sx={{pl:{sm:0,md:4}, overflow: "hidden", flex: 1 }}>
+        <AboutContent sections={sections} styles={styles} title={title}/>
+        </Box>
         <Box
           component="img"
-          src="/assets/about-img.png"
+          src="/assets/code-bg.png"
           alt={title || "About Image"}
-          width={430}
-          height={450}
+          width={400}
+          height={400}
           loading="lazy"
           sx={imageStyle}
         />
-        <Box sx={{ overflow: "hidden", flex: 1 }}>
-        <AboutContent sections={sections} styles={styles} title={title}/>
-        </Box>
       </Box>
     </Box>
   );

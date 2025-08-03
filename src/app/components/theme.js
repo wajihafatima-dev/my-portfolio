@@ -17,6 +17,7 @@ export const getThemeOptions = (mode = "light") => {
       background: {
         default: colors.background,
         paper: colors.surface,
+        bg:colors.contactBg
       },
       text: {
         primary: colors.textPrimary,

@@ -1,17 +1,27 @@
 import React from "react";
-import { Box, Grid} from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import ContactContent from "./contactContant";
 import ContactForm from "./contactForm";
 
 const ContactSection = () => {
   return (
-    <Box sx={{ paddingX: { xs: 1, sm: 5, md: 10 }, textAlign: "center",paddingTop: {md: 4, lg:20 },paddingBottom:{xs:4,sm:16} }}
-    id="contact">
-     <Grid container spacing={2} justifyContent="center" alignItems="center">
-       <ContactContent/>
-        <ContactForm/>
+    <Box
+      id="contact"
+      sx={(theme)=>({
+        backgroundColor: theme.palette.background.bg, // light yellowish tone
+        py: 16,
+      })}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={3} justifyContent="center" alignItems="center">
+          <ContactContent />
+          <Grid item xs={12} md={5} justifyContent={"center"}>
+            <ContactForm />
+          </Grid>
         </Grid>
+      </Container>
     </Box>
   );
 };
+
 export default ContactSection;
