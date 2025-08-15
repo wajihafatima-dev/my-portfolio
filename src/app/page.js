@@ -11,6 +11,7 @@ import {
 } from "./constants/PAGE_CONSTANT";
 import ServiceSection from "./components/myService/ServiceSection";
 import ContactSection from "./components/contactSection/ContactSection";
+import ProjectSection from "./components/myProjects/ProjectSection";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <AboutSection data={ABOUT_SECTION_DATA} />
       <SkillSection data={SKILL_SECTION_DATA} />
       <ServiceSection data={SERVICE_SECTION_DATA} />
+      <ProjectSection data={PROJECT_SECTION_DATA}/>
       <ContactSection />
     </Box>
   );

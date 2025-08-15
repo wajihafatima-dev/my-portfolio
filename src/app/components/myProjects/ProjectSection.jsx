@@ -9,7 +9,7 @@ import SwiperWrapper from "../SwiperWrapper";
 // Project data with images and links
 
 
-const ProjectSliderSection = ({data}) => {
+const ProjectSection = ({data}) => {
   const {cardData,styles}=data || {}
   return (
     <Box sx={{  py: 6 ,px:{xs:1,md:6}}}>
@@ -18,4 +18,4 @@ const ProjectSliderSection = ({data}) => {
   );
 };
 
-export default ProjectSliderSection;
+export default ProjectSection;
