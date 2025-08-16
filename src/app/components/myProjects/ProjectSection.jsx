@@ -11,7 +11,7 @@ import { TITLE_STYLE } from "@/app/constants/PAGE_CONSTANT";
 
 
 const ProjectSection = ({data}) => {
-  const {cardData,styles}=data || {}
+  const {title,cardData,styles}=data || {}
   return (
     <Box sx={{ py: 6, px: { xs: 1, md: 6 }, textAlign:"center"}}>
       <Typography variant="h2" fontWeight="bold" sx={TITLE_STYLE}>
