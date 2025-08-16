@@ -246,6 +246,7 @@ export const ABOUT_SECTION_DATA = {
     mainBox: {
       color: "#000",
       minWidth: "100%",
+    //  background: "linear-gradient(to right, #1D2D3B, #000)",
     },
     gridBox: {
       display: "flex",
@@ -306,31 +307,30 @@ export const TITLE_STYLE = {
 };
 export const PROJECT_SECTION_DATA = {
   title: "MY PROJECTS",
-  imageUrl: ["/images/picture.jpg"],
   cardData: [
     {
-      image: "/images/project1.jpg", // Add your image paths here
-      title: "Web Development",
-      description: "Custom website built with React, Node.js, and Firebase.",
-      projectLink: "https://example.com/project1",
+      image: "/images/counter.jpg", 
+      title: "Counter",
+      description: "Counter page with React.js.",
+      projectLink: "https://counter-zeta-nine.vercel.app/",
     },
     {
-      image: "/images/picture.jpg",
-      title: "UI/UX Design",
-      description: "Clean and modern UI/UX design for a mobile app project.",
-      projectLink: "https://example.com/project2",
+      image: "/images/quiz.jpg",
+      title: "Quiz App",
+      description: "Quiz App with tailwind CSS on Next.js.",
+      projectLink: "https://quiz-app-two-kappa-43.vercel.app/quiz",
     },
     {
-      image: "/images/project3.jpg",
-      title: "WordPress Development",
-      description: "Developed a responsive WordPress theme with Elementor.",
-      projectLink: "https://example.com/project3",
+      image: "/images/todo.jpg",
+      title: "TODO LIST",
+      description: "Todo list with Next.js.",
+      projectLink: "https://todo-app-two-theta-77.vercel.app/",
     },
     {
-      image: "/images/project4.jpg",
-      title: "E-commerce Site",
-      description: "An online store with cart, payment, and admin panel.",
-      projectLink: "https://example.com/project4",
+      image: "/images/recipe.jpg",
+      title: "Recipe Finder",
+      description: "Find Your Recipe.",
+      projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
     },
   ],
   badgeColors: [cyan[200], lightBlue[500], orange[700], lightGreen[600]],

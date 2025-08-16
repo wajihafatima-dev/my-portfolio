@@ -1,6 +1,6 @@
 "use client";
 import { Box } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import "aos/dist/aos.css";
 import HeroImage from "./HeroImage";
 import HeroSectionContant from "./HeroSectionContant";
@@ -9,16 +9,17 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-      display: "flex",
-      flexDirection:"column",
-      alignItems:"center",
-      justifyContent: "center",
-      height: "90vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        
+        minHeight: "90vh", // Ensures it takes full screen height
       }}
       // data-aos="fade-down"
     >
       <HeroImage />
-      <HeroSectionContant/>
+      <HeroSectionContant />
     </Box>
   );
 };

@@ -68,7 +68,7 @@ const ContactForm = () => {
         },
       })}
     >
-    <Box sx={{display:"flex",flexDirection:"column",gap:2}}>
+    <Box sx={{display:"flex",flexDirection:"column",justifyContent:"center",gap:2}}>
 
       <TextField
         label="Your Name"

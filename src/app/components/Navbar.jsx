@@ -20,17 +20,19 @@ const Navbar = () => {
         zIndex: 10,
         mx: "auto",
         border: "1px solid #33353F",
-        backgroundColor: "#121212",
+        backgroundImage: "linear-gradient(to right, #3a7bd5, #00d2ff)", // blue to light purple-like cyan
         opacity: 1,
       }}
     >
+
       <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
           alignItems: "center",
+
           justifyContent: "space-between",
-          mx: "auto", 
+          mx: "auto",
           px: 4,
           py: 1,
         }}
@@ -38,14 +40,14 @@ const Navbar = () => {
         <Link href="/" className="text-xl text-white font-semibold">
           Portfolio
         </Link>
-        
+
         <Box sx={{ display: { xs: "block", md: "none" } }}>
           {!navbarOpen ? (
             <IconButton
               onClick={() => setNavbarOpen(true)}
               sx={{
                 padding: 1,
-                border: "1px solid #cbd5e0", 
+                border: "1px solid #cbd5e0",
                 color: "#cbd5e0",
                 "&:hover": {
                   color: "white",
@@ -60,7 +62,7 @@ const Navbar = () => {
               onClick={() => setNavbarOpen(false)}
               sx={{
                 padding: 1,
-                border: "1px solid #cbd5e0", 
+                border: "1px solid #cbd5e0",
                 color: "#cbd5e0",
                 "&:hover": {
                   color: "white",
@@ -74,11 +76,11 @@ const Navbar = () => {
         </Box>
         <Box
           sx={{
-            display: { xs: "none", md: "block" }, 
+            display: { xs: "none", md: "block" },
             width: "auto",
           }}
         >
-          
+
         </Box>
       </Box>
       {navbarOpen && <Menu links={NAV_LINKS} />}

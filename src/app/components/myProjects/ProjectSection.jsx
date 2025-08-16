@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import SwiperWrapper from "../SwiperWrapper";
+import { TITLE_STYLE } from "@/app/constants/PAGE_CONSTANT";
 
 // Project data with images and links
 
@@ -12,8 +13,11 @@ import SwiperWrapper from "../SwiperWrapper";
 const ProjectSection = ({data}) => {
   const {cardData,styles}=data || {}
   return (
-    <Box sx={{  py: 6 ,px:{xs:1,md:6}}}>
-    <SwiperWrapper cardData={cardData} styles={styles}/>
+    <Box sx={{ py: 6, px: { xs: 1, md: 6 }, textAlign:"center"}}>
+      <Typography variant="h2" fontWeight="bold" sx={TITLE_STYLE}>
+        {title}
+      </Typography>
+      <SwiperWrapper cardData={cardData} styles={styles} />
     </Box>
   );
 };

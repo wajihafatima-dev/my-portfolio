@@ -1,5 +1,5 @@
 "use client";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import AboutContent from "./AboutContant";
 
 const AboutSection = ({ data = {} }) => {
@@ -16,7 +16,7 @@ const AboutSection = ({ data = {} }) => {
   } = styles;
 
   return (
-    <Box sx={mainBox} id="about">
+    <Container sx={mainBox} id="about">
       <Box sx={gridBox}>
         <Box sx={{pl:{sm:0,md:4}, overflow: "hidden", flex: 1 }}>
         <AboutContent sections={sections} styles={styles} title={title}/>
@@ -31,7 +31,7 @@ const AboutSection = ({ data = {} }) => {
           sx={imageStyle}
         />
       </Box>
-    </Box>
+    </Container>
   );
 };
 
