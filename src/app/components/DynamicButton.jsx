@@ -25,7 +25,6 @@ const DynamicButton = ({
       sx={{
         textTransform: "lowercase",
         fontFamily: "-moz-initial",
-        paddingX: { xs: 2, sm: 4 },
         ...sx,
       }}
       {...props}

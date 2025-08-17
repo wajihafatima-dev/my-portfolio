@@ -12,6 +12,7 @@ const lightColors = {
   headingColor:"#120061",
   buttonText: "#ffffff",
   titleColor:"linear-gradient(to right, #7e6dff, #120061)",
+  bg:"linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)",
 };
 
 const darkColors = {
@@ -28,6 +29,7 @@ const darkColors = {
   cardShadow:"0 0 16px 4px rgba(255, 255, 255, 0.02)",
   buttonBackground: "#90caf9",
   buttonText: "#000000",
+  bg:"linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
 };
 
 export const getColors = (mode = "light") => {

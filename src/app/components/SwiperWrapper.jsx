@@ -5,13 +5,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, Autoplay } from "swiper/modules";
-import {
-  Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Box,
-} from "@mui/material";
+import { Typography, Card, CardContent, CardMedia, Box } from "@mui/material";
 import DynamicButton from "./DynamicButton";
 
 const SwiperWrapper = ({ cardData, styles }) => {
@@ -23,7 +17,7 @@ const SwiperWrapper = ({ cardData, styles }) => {
         960: { slidesPerView: 3 },
         1280: { slidesPerView: 4 },
       }}
-      spaceBetween={20}
+      spaceBetween={14}
       autoplay={{
         delay: 1500,
         disableOnInteraction: false,
@@ -33,21 +27,51 @@ const SwiperWrapper = ({ cardData, styles }) => {
       className="mySwiper"
     >
       {cardData?.map((item, index) => (
-        <SwiperSlide key={index}>
+        <SwiperSlide
+          style={{
+            paddingTop: "1rem",
+            paddingBottom: "1rem",
+            paddingLeft: 0,
+            paddingRight: 0,
+          }}
+          key={index}
+        >
           <Card sx={styles.cardStyle}>
-            <CardMedia
-              component="img"
-              height="190"
-              image={item.image}
-              alt={item.title}
-            />
+            <Box
+              sx={{
+                padding: "1rem",
+              }}
+            >
+              <Box
+                component="img"
+                sx={styles.cardImg}
+                src={item.image}
+                alt={item.title}
+              />
+            </Box>
             <CardContent>
-              <Typography variant="h6" gutterBottom color="white">
-                {item.title}
-              </Typography>
-              <Typography variant="body2" color="gray">
-                {item.description}
-              </Typography>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    ...styles.cardtitle,
+                    fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" }, 
+                    fontWeight: 600,
+                  }}
+                >
+                  {item.title}
+                </Typography>
+
+                <Typography
+                  variant="body2"
+                  color="gray"
+                  sx={{
+                    fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.95rem" }, 
+                    lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
+                  }}
+                >
+                  {item.description}
+                </Typography>
+
               <Box mt={2}>
                 <DynamicButton
                   href={item.projectLink}

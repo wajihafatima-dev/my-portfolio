@@ -8,7 +8,6 @@ const ContactSection = () => {
     <Box
       id="contact"
       sx={(theme)=>({
-        backgroundColor: theme.palette.background.bg, // light yellowish tone
         py: 16,
       })}
     >

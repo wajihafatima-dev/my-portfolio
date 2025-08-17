@@ -3,7 +3,7 @@
 import "aos/dist/aos.css";
 import { useState, useMemo } from "react";
 import { ThemeProvider, CssBaseline, } from "@mui/material";
-import { getResponsiveTheme } from "./components/theme";
+import { getResponsiveTheme } from "./components/theme/theme";
 import Sidebar from "./components/Sidebar";
 
 export default function RootLayout({ children }) {

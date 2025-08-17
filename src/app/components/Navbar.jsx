@@ -20,7 +20,7 @@ const Navbar = () => {
         zIndex: 10,
         mx: "auto",
         border: "1px solid #33353F",
-        backgroundImage: "linear-gradient(to right, #3a7bd5, #00d2ff)", // blue to light purple-like cyan
+        background: "linear-gradient(to right, #3a7bd5, #00d2ff)", 
         opacity: 1,
       }}
     >

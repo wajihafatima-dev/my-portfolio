@@ -246,7 +246,7 @@ export const ABOUT_SECTION_DATA = {
     mainBox: {
       color: "#000",
       minWidth: "100%",
-    //  background: "linear-gradient(to right, #1D2D3B, #000)",
+      //  background: "linear-gradient(to right, #1D2D3B, #000)",
     },
     gridBox: {
       display: "flex",
@@ -308,76 +308,64 @@ export const TITLE_STYLE = {
 export const PROJECT_SECTION_DATA = {
   title: "MY PROJECTS",
   cardData: [
-    {
-      image: "/images/counter.jpg", 
-      title: "Counter",
-      description: "Counter page with React.js.",
-      projectLink: "https://counter-zeta-nine.vercel.app/",
-    },
-    {
-      image: "/images/quiz.jpg",
-      title: "Quiz App",
-      description: "Quiz App with tailwind CSS on Next.js.",
-      projectLink: "https://quiz-app-two-kappa-43.vercel.app/quiz",
-    },
-    {
-      image: "/images/todo.jpg",
-      title: "TODO LIST",
-      description: "Todo list with Next.js.",
-      projectLink: "https://todo-app-two-theta-77.vercel.app/",
-    },
-    {
-      image: "/images/recipe.jpg",
-      title: "Recipe Finder",
-      description: "Find Your Recipe.",
-      projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
-    },
-  ],
-  badgeColors: [cyan[200], lightBlue[500], orange[700], lightGreen[600]],
-  // icon: [
-  //   "../assets/monitor.png",
-  //   "../assets/code.png",
-  //   "../assets/react.png",
-  //   "../assets/business.png",
-  // ],
-  styles: {
-    mainBox: {
-      textAlign: "center",
-      background: "linear-gradient(to right, #1D2D3B, #000)",
-      px: { xs: 3, md: 0 },
-      height: "100%",
-      pb: 5,
-    },
-    cardStyle: {
-      backgroundColor: "#131722",
-      borderRadius: "20px",
-      color: "#fff",
-      textAlign: "center",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      minHeight: 250,
-      position: "relative",
-      overflow: "hidden",
-      padding: "1rem",
-      // boxShadow: `0 0 15px 4px rgba(0, 255, 255, 0.6)`,
-      backdropFilter: "blur(8px)",
-      border: "2px solid rgba(255, 255, 255, 0.1)",
-      transition: "all 0.4s ease-in-out",
-      transform: "scale(1)",
-      "&:hover": {
-        boxShadow: "0 0 8px 2px rgb(251, 192, 45, 0.7)",
-      },
-    },
-
-    cardImg: {
-      width: 100,
-      height: 100,
-      mb: 2,
-    },
-    cardTitle: {
-      color: "#e066ff",
-      mb: 1,
-    },
+  {
+    image: "/images/counter.jpg",
+    title: "Counter",
+    description: "A simple and interactive counter app built with React.js.",
+    projectLink: "https://counter-zeta-nine.vercel.app/",
   },
+  {
+    image: "/images/quiz.jpg",
+    title: "Quiz App",
+    description: "An engaging quiz application developed with Next.js.",
+    projectLink: "https://quiz-app-two-kappa-43.vercel.app/quiz",
+  },
+  {
+    image: "/images/todo.jpg",
+    title: "TODO LIST",
+    description: "A clean and efficient to-do list built with Next.js.",
+    projectLink: "https://todo-app-two-theta-77.vercel.app/",
+  },
+  {
+    image: "/images/recipe.jpg",
+    title: "Recipe Finder",
+    description: "Explore delicious recipes instantly with this Next.js recipe finder.",
+    projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
+  },
+  {
+    image: "/images/recipe.jpg",
+    title: "E-commerce",
+    description: "Explore delicious food items with this Next.js e-commerce website.",
+    projectLink: "https://e-commerce-xi-three-10.vercel.app/",
+  },
+],
+
+  badgeColors: [cyan[200], lightBlue[500], orange[700], lightGreen[600]],
+
 };
+export const projectSectionStyles = (theme) => ({
+cardStyle: {
+  backgroundColor: theme.palette.mode === "dark" ? "#131722" : "#ffffff",
+  borderRadius: "20px",
+  color: theme.palette.mode === "dark" ? "#ffffff" : "#111",
+  textAlign: "center",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  minHeight: 250,  // base height for consistency
+  height: "auto",  // let content decide height
+  position: "relative",
+  overflow: "hidden",
+  backdropFilter: "blur(8px)",
+  border: "2px solid rgba(255, 255, 255, 0.1)",
+  transition: "box-shadow 0.3s ease",
+  padding: "3px", // spacing for content
+}
+,
+cardImg: {
+  width: "100%",
+  height: "23vh",
+  objectFit: "cover",
+  objectPosition: "center", 
+}
+});

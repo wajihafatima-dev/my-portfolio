@@ -1,23 +1,29 @@
 import React from "react";
-import { Card, CardContent, Typography, Button, Box, CardMedia } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Typography, Box, useTheme, Container } from "@mui/material";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
 import SwiperWrapper from "../SwiperWrapper";
-import { TITLE_STYLE } from "@/app/constants/PAGE_CONSTANT";
+import {
+  projectSectionStyles,
+  TITLE_STYLE,
+} from "@/app/constants/PAGE_CONSTANT";
 
-// Project data with images and links
-
-
-const ProjectSection = ({data}) => {
-  const {title,cardData,styles}=data || {}
+const ProjectSection = ({ data }) => {
+  const { title, cardData } = data || {};
+  const theme = useTheme();
   return (
-    <Box sx={{ py: 6, px: { xs: 1, md: 6 }, textAlign:"center"}}>
+    <Box
+      sx={{
+        textAlign: "center",
+        background:theme.palette.background.bg,
+        paddingLeft: { xs: 3, md: 6 },
+        paddingRight: { xs: 3, md: 6 },
+      }}
+    >
       <Typography variant="h2" fontWeight="bold" sx={TITLE_STYLE}>
         {title}
       </Typography>
-      <SwiperWrapper cardData={cardData} styles={styles} />
+      <SwiperWrapper cardData={cardData} styles={projectSectionStyles(theme)} />
     </Box>
   );
 };

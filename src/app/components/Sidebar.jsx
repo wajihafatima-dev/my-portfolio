@@ -47,7 +47,7 @@ const Sidebar = ({ mode, toggleMode }) => {
                 px: 2,
                 py: 1.5,
                 "&:hover": {
-                  backgroundColor: "rgba(255,255,255,0.1)",
+                  backgroundColor: "rgba(106, 121, 55, 0.1)",
                 },
               }}
             >
