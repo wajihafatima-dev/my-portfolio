@@ -35,9 +35,9 @@ const AboutContent = ({ title, sections = [], styles = {} }) => {
               position: "absolute",
               left: { xs: 31, md: 18},
               top: 20,
-              width: "0px", // no width needed for a vertical line
+              width: "0px", 
               height: "80%",
-              borderLeft: `2px solid ${theme.palette.text.secondary}`, // ✅ full border string
+              borderLeft: `2px solid ${theme.palette.text.secondary}`,
             })}
           />
            <Box sx={{pl:2}}>

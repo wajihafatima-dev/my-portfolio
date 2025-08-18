@@ -26,11 +26,14 @@ const Sidebar = ({ mode, toggleMode }) => {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ px: 2, pt: 2}}>
+    <Box onClick={handleDrawerToggle} sx={{ px: 2, pt: 2 }}>
       <IconButton sx={{ float: "right" }}>
         <CloseIcon sx={{ color: "#fff" }} />
       </IconButton>
-      <Typography variant="h6" sx={{ my: 3, fontWeight: "bold", color: "#fff" }}>
+      <Typography
+        variant="h6"
+        sx={{ my: 3, fontWeight: "bold", color: "#fff" }}
+      >
         My Website
       </Typography>
       <List>
@@ -71,7 +74,7 @@ const Sidebar = ({ mode, toggleMode }) => {
       >
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Link
-            href="/"
+            href="#herosection"
             sx={{
               textDecoration: "none",
               color: "#fff",
@@ -83,16 +86,35 @@ const Sidebar = ({ mode, toggleMode }) => {
           </Link>
 
           {/* Desktop Links */}
-          <Box sx={{ display: { xs: "none", sm: "flex" }, gap: 2 }}>
+          <Box  sx={{ display: { xs: "none", sm: "flex" }, gap: 1.5 }}>
             {NAV_LINKS.map((link, index) => (
               <Button
-                key={index}
+              key={index}
                 component={NavLink}
                 href={link.path}
                 sx={{
+                  position: "relative",
                   color: "#fff",
                   textTransform: "none",
                   fontWeight: "bold",
+                  "&:hover": {
+                    backgroundColor: "transparent",
+                  },
+                  "&::after": {
+                    content: '""',
+                    position: "absolute",
+                    bottom: 4,
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    width: "0%",
+                    height: "3px",
+                    borderRadius: "2px",
+                    background: "linear-gradient(to right, #eeebebff, #e2afd9ff)",
+                    transition: "width 0.3s ease-in-out",
+                  },
+                  "&:hover::after": {
+                    width: "80%",
+                  },
                 }}
               >
                 {link.title}

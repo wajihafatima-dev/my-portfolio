@@ -60,9 +60,10 @@ const DynamicCard = ({ cardData, styles, images, icon, colors }) => {
               </Typography>
               <Typography
                 sx={(theme) => ({
-                  fontSize: 17,
+                  fontSize: {xs:"12px",sm:"14px",md:"17px"},
+                  py:1,
                   color:
-                    theme.palette.mode === "dark" ? "#aaa" : "#666", // Better contrast
+                    theme.palette.mode === "dark" ? "#aaa" : "#666", 
                 })}
               >
                 {item.description}

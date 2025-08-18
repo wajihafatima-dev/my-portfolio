@@ -13,11 +13,13 @@ const ProjectSection = ({ data }) => {
   const theme = useTheme();
   return (
     <Box
+      id="myprojects"
       sx={{
         textAlign: "center",
-        background:theme.palette.background.bg,
+        background: theme.palette.background.bg,
         paddingLeft: { xs: 3, md: 6 },
         paddingRight: { xs: 3, md: 6 },
+        paddingBottom: { xs: 3, md: 6 },
       }}
     >
       <Typography variant="h2" fontWeight="bold" sx={TITLE_STYLE}>

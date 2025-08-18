@@ -8,15 +8,14 @@ import HeroSectionContant from "./HeroSectionContant";
 const HeroSection = () => {
   return (
     <Box
+      id="herosection"
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        
-        minHeight: "90vh", // Ensures it takes full screen height
+        minHeight: "80vh", 
       }}
-      // data-aos="fade-down"
     >
       <HeroImage />
       <HeroSectionContant />

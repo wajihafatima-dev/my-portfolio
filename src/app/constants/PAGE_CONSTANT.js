@@ -46,7 +46,7 @@ export const NAV_LINKS = [
   },
   {
     title: "My Projects",
-    path: "#mywork",
+    path: "#myprojects",
   },
   {
     title: "Contact",
@@ -119,36 +119,54 @@ export const SERVICE_SECTION_DATA = {
     {
       title: "Web Development",
       description:
-        "Building responsive and dynamic web applications using modern technologies.",
+        "Creating beautiful and user-friendly interfaces with React.js and Material-UI.",
     },
     {
-      title: "Frontend Design",
+      title: "Responsive UI",
       description:
-        "Creating beautiful and user-friendly interfaces with React.js and Material-UI.",
+        "Designing and coding responsive layouts that adapt seamlessly across all devices.",
     },
     {
       title: "Next.js Development",
       description:
         "Developing SEO-friendly and fast server-side rendered applications using Next.js.",
     },
-    // {
-    //   title: "Accessibility Enhancement",
-    //   description:
-    //     "Making web applications accessible to everyone, regardless of their abilities.",
-    // },
+    {
+      title: "Performance Optimization",
+      description:
+        "Improving website speed, accessibility, and performance for a smooth user experience.",
+    },
+    {
+      title: "API Integration",
+      description:
+        "Connecting frontend with REST APIs services for dynamic data handling.",
+    },
+    {
+      title: "Version Control & Deployment",
+      description:
+        "Using Git/GitHub for code management and deploying applications on Vercel, Netlify, and other platforms.",
+    },
   ],
-  badgeColors: [pink[500], purple[500], yellow[700], blue[600]],
+  badgeColors: [
+    teal[500],
+    pink[500],
+    yellow[700],
+    blue[500],
+    lightGreen[500],
+    purple[400],
+  ],
   icon: [
+    "../assets/cod.png",
     "../assets/monitor.png",
-    "../assets/code.png",
     "../assets/react.png",
     "../assets/business.png",
+    "../assets/api.png",
+    "../assets/git.png",
   ],
   styles: {
     mainBox: {
       textAlign: "center",
       px: { xs: 3, md: 8 },
-      height: "100%",
     },
     cardStyle: {
       backgroundColor: "#131722",
@@ -229,24 +247,23 @@ export const ABOUT_SECTION_DATA = {
     {
       title: "Introduction",
       content:
-        "Hi! I’m Alishba, a dedicated Frontend Developer with a passion for creating engaging, user-friendly, and innovative web solutions. My expertise includes modern web development tools like HTML, CSS, JavaScript, TypeScript, React, and Next.js, enabling me to bring ideas to life through beautifully designed and fully functional websites.",
-    },
-    {
-      title: "My Journey",
-      content:
-        "I began my journey into tech with a deep interest in designing and coding. Over the past year, I have been learning as a Senior Student at Governor's House, where I had the opportunity to gain hands-on experience in building responsive websites and dynamic applications.",
+        "Hi! I’m Wajiha Mukhtar, a dedicated Frontend Developer with a passion for creating engaging, user-friendly, and innovative web solutions. My expertise includes modern web development tools like HTML, CSS, JavaScript, TypeScript, React, and Next.js, enabling me to bring ideas to life through beautifully designed and fully functional websites.",
     },
     {
       title: "Skills",
       content:
-        "I am proficient in HTML, CSS, JavaScript, React.js, and Next.js. I have extensive experience in building dynamic, high-performing, and accessible web applications using modern frameworks and tools.",
+       "I am proficient in HTML, CSS, JavaScript, React.js, and Next.js. I specialize in building dynamic, responsive, and accessible web applications using modern frameworks and tools such as Tailwind CSS, Bootstrap, and Material-UI (MUI), ensuring clean design and seamless user experiences."
+    },
+    {
+      title: "About My Work",
+      content:
+        "As a Frontend Developer, I focus on writing clean, maintainable, and scalable code while ensuring that each project delivers an excellent user experience. I pay great attention to responsive design and performance optimization.",
     },
   ],
   styles: {
     mainBox: {
       color: "#000",
       minWidth: "100%",
-      //  background: "linear-gradient(to right, #1D2D3B, #000)",
     },
     gridBox: {
       display: "flex",
@@ -308,64 +325,64 @@ export const TITLE_STYLE = {
 export const PROJECT_SECTION_DATA = {
   title: "MY PROJECTS",
   cardData: [
-  {
-    image: "/images/counter.jpg",
-    title: "Counter",
-    description: "A simple and interactive counter app built with React.js.",
-    projectLink: "https://counter-zeta-nine.vercel.app/",
-  },
-  {
-    image: "/images/quiz.jpg",
-    title: "Quiz App",
-    description: "An engaging quiz application developed with Next.js.",
-    projectLink: "https://quiz-app-two-kappa-43.vercel.app/quiz",
-  },
-  {
-    image: "/images/todo.jpg",
-    title: "TODO LIST",
-    description: "A clean and efficient to-do list built with Next.js.",
-    projectLink: "https://todo-app-two-theta-77.vercel.app/",
-  },
-  {
-    image: "/images/recipe.jpg",
-    title: "Recipe Finder",
-    description: "Explore delicious recipes instantly with this Next.js recipe finder.",
-    projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
-  },
-  {
-    image: "/images/recipe.jpg",
-    title: "E-commerce",
-    description: "Explore delicious food items with this Next.js e-commerce website.",
-    projectLink: "https://e-commerce-xi-three-10.vercel.app/",
-  },
-],
+    {
+      image: "/images/counter.jpg",
+      title: "Counter",
+      description: "A simple and interactive counter app built with React.js.",
+      projectLink: "https://counter-zeta-nine.vercel.app/",
+    },
+    {
+      image: "/images/quiz.jpg",
+      title: "Quiz App",
+      description: "An engaging quiz application developed with Next.js.",
+      projectLink: "https://quiz-app-two-kappa-43.vercel.app/quiz",
+    },
+    {
+      image: "/images/todo.jpg",
+      title: "TODO LIST",
+      description: "A clean and efficient to-do list built with Next.js.",
+      projectLink: "https://todo-app-two-theta-77.vercel.app/",
+    },
+    {
+      image: "/images/recipe.jpg",
+      title: "Recipe Finder",
+      description:
+        "Explore delicious recipes instantly with this Next.js recipe finder.",
+      projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
+    },
+    {
+      image: "/images/welcome.png",
+      title: "E-commerce",
+      description:
+        "Explore delicious food items with this Next.js e-commerce website.",
+      projectLink: "https://e-commerce-xi-three-10.vercel.app/",
+    },
+  ],
 
   badgeColors: [cyan[200], lightBlue[500], orange[700], lightGreen[600]],
-
 };
 export const projectSectionStyles = (theme) => ({
-cardStyle: {
-  backgroundColor: theme.palette.mode === "dark" ? "#131722" : "#ffffff",
-  borderRadius: "20px",
-  color: theme.palette.mode === "dark" ? "#ffffff" : "#111",
-  textAlign: "center",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "flex-start",
-  minHeight: 250,  // base height for consistency
-  height: "auto",  // let content decide height
-  position: "relative",
-  overflow: "hidden",
-  backdropFilter: "blur(8px)",
-  border: "2px solid rgba(255, 255, 255, 0.1)",
-  transition: "box-shadow 0.3s ease",
-  padding: "3px", // spacing for content
-}
-,
-cardImg: {
-  width: "100%",
-  height: "23vh",
-  objectFit: "cover",
-  objectPosition: "center", 
-}
+  cardStyle: {
+    backgroundColor: theme.palette.mode === "dark" ? "#131722" : "#ffffff",
+    borderRadius: "20px",
+    color: theme.palette.mode === "dark" ? "#ffffff" : "#111",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    minHeight: 250,
+    height: "auto",
+    position: "relative",
+    overflow: "hidden",
+    backdropFilter: "blur(8px)",
+    border: "2px solid rgba(255, 255, 255, 0.1)",
+    transition: "box-shadow 0.3s ease",
+    padding: "3px",
+  },
+  cardImg: {
+    width: "100%",
+    height: "23vh",
+    objectFit: "cover",
+    objectPosition: "center",
+  },
 });

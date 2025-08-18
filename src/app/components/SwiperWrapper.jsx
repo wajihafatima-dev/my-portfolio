@@ -67,6 +67,7 @@ const SwiperWrapper = ({ cardData, styles }) => {
                   sx={{
                     fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.95rem" }, 
                     lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
+                    height:50,
                   }}
                 >
                   {item.description}
