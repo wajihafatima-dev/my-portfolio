@@ -84,8 +84,6 @@ const Sidebar = ({ mode, toggleMode }) => {
           >
             Portfolio
           </Link>
-
-          {/* Desktop Links */}
           <Box  sx={{ display: { xs: "none", sm: "flex" }, gap: 1.5 }}>
             {NAV_LINKS.map((link, index) => (
               <Button
@@ -122,8 +120,6 @@ const Sidebar = ({ mode, toggleMode }) => {
             ))}
             <ToggleTheme mode={mode} toggleMode={toggleMode} />
           </Box>
-
-          {/* Mobile Menu Button */}
           <IconButton
             color="inherit"
             edge="start"
@@ -134,8 +130,6 @@ const Sidebar = ({ mode, toggleMode }) => {
           </IconButton>
         </Toolbar>
       </AppBar>
-
-      {/* Mobile Drawer */}
       <Drawer
         variant="temporary"
         open={mobileOpen}

@@ -53,7 +53,6 @@ const SwiperWrapper = ({ cardData, styles }) => {
                 <Typography
                   variant="h6"
                   sx={{
-                    ...styles.cardtitle,
                     fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" }, 
                     fontWeight: 600,
                   }}
@@ -67,13 +66,14 @@ const SwiperWrapper = ({ cardData, styles }) => {
                   sx={{
                     fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.95rem" }, 
                     lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
-                    height:50,
+                     minHeight: 50,
+                    height: "auto",
                   }}
                 >
                   {item.description}
                 </Typography>
 
-              <Box mt={2}>
+              <Box mt={1}>
                 <DynamicButton
                   href={item.projectLink}
                   target="_blank"

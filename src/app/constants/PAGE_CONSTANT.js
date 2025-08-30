@@ -252,7 +252,7 @@ export const ABOUT_SECTION_DATA = {
     {
       title: "Skills",
       content:
-       "I am proficient in HTML, CSS, JavaScript, React.js, and Next.js. I specialize in building dynamic, responsive, and accessible web applications using modern frameworks and tools such as Tailwind CSS, Bootstrap, and Material-UI (MUI), ensuring clean design and seamless user experiences."
+        "I am proficient in HTML, CSS, JavaScript, React.js, and Next.js. I specialize in building dynamic, responsive, and accessible web applications using modern frameworks and tools such as Tailwind CSS, Bootstrap, and Material-UI (MUI), ensuring clean design and seamless user experiences.",
     },
     {
       title: "About My Work",
@@ -339,7 +339,7 @@ export const PROJECT_SECTION_DATA = {
     },
     {
       image: "/images/todo.jpg",
-      title: "TODO LIST",
+      title: "Todo List",
       description: "A clean and efficient to-do list built with Next.js.",
       projectLink: "https://todo-app-two-theta-77.vercel.app/",
     },
@@ -347,15 +347,22 @@ export const PROJECT_SECTION_DATA = {
       image: "/images/recipe.jpg",
       title: "Recipe Finder",
       description:
-        "Explore delicious recipes instantly with this Next.js recipe finder.",
+      "Explore delicious recipes instantly with this Next.js recipe finder.",
       projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
     },
     {
       image: "/images/welcome.png",
       title: "E-commerce",
       description:
-        "Explore delicious food items with this Next.js e-commerce website.",
+      "Explore delicious food items with this Next.js e-commerce website.",
       projectLink: "https://e-commerce-xi-three-10.vercel.app/",
+    },
+    {
+      image: "/images/dashboard.png",
+      title: "Dashboard",
+      description:
+        "A user-friendly dashboard where users can log in, manage their profiles with an interface built using Next.js.",
+      projectLink: "https://resourceinn.vercel.app/login",
     },
   ],
 
@@ -381,8 +388,9 @@ export const projectSectionStyles = (theme) => ({
   },
   cardImg: {
     width: "100%",
-    height: "23vh",
+    height: "20vh",
     objectFit: "cover",
     objectPosition: "center",
   },
 });
+
