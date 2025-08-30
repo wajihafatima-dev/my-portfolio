@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Container, Typography } from "@mui/material";
-import ContactContent from "./contactContant";
-import ContactForm from "./contactForm";
+import ContactForm from "./ContactForm";
+import ContactContant from "./ContactContant";
 
 const ContactSection = () => {
   return (
@@ -47,7 +47,7 @@ const ContactSection = () => {
         </Box>
 
         <Grid container spacing={3} justifyContent="center" alignItems="center">
-          <ContactContent />
+          <ContactContant />
           <Grid item xs={12} md={5} justifyContent={"center"}>
             <ContactForm />
           </Grid>

@@ -2,7 +2,7 @@ import React from "react";
 import { Grid, IconButton, Typography } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-const ContactContent = () => {
+const ContactContant = () => {
   return (
       <Grid item xs={12} md={5} sx={{ textAlign: { xs: "center", md: "left" } }}>
         <Typography variant="h4" gutterBottom>
@@ -29,4 +29,4 @@ const ContactContent = () => {
   );
 };
 
-export default ContactContent;
+export default ContactContant;
