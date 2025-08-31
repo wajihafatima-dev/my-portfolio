@@ -32,6 +32,6 @@ const darkColors = {
   bg:"linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
 };
 
-export const getColors = (mode = "light") => {
+export const getColors = (mode = "dark") => {
   return mode === "dark" ? darkColors : lightColors;
 };

@@ -1,7 +1,8 @@
 "use client";
-import { Box, Grid, TextField, Button } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import DynamicButton from "../DynamicButton";
+import { contactApi } from "../../../../apiEndpoints";
 
 const ContactForm = () => {
   const [form, setForm] = useState({
@@ -10,6 +11,7 @@ const ContactForm = () => {
     message: "",
   });
   const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm((prev) => ({
@@ -21,24 +23,30 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
+    setLoading(true);
 
     try {
-      const res = await fetch("/api/contact", {
+      const response = await fetch(contactApi, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(form),
       });
 
-      const data = await res.json();
-      if (res.ok) {
-        setStatus("Message sent successfully!");
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus(data.message || "Message sent successfully!");
         setForm({ name: "", email: "", message: "" });
       } else {
-        setStatus(data.message || "Something went wrong.");
+        setStatus(data.message || "Failed to send message.");
       }
     } catch (error) {
-      console.error(error);
-      setStatus("Error sending message.");
+      console.error("Error submitting contact form:", error);
+      setStatus("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -73,8 +81,8 @@ const ContactForm = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          alignItems: "center", 
-          gap:2
+          alignItems: "center",
+          gap: 2,
         }}
       >
         <TextField
@@ -107,10 +115,12 @@ const ContactForm = () => {
           value={form.message}
           onChange={handleChange}
         />
+
         <DynamicButton
-          label="Submit"
+          label={loading ? "Sending..." : "Submit"}
           type="submit"
           variant="contained"
+          disabled={loading}
           sx={{
             color: "#fff",
             border: "2px solid transparent",
@@ -133,6 +143,23 @@ const ContactForm = () => {
             },
           }}
         />
+
+        {status && (
+          <Typography
+            variant="body2"
+            sx={{
+              marginTop: 2,
+              color:
+                status.includes("success")
+                  ? "green"
+                  : status.includes("Error")
+                  ? "red"
+                  : "text.secondary",
+            }}
+          >
+            {status}
+          </Typography>
+        )}
       </Box>
     </Box>
   );

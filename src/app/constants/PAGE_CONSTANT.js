@@ -244,21 +244,21 @@ export const SKILL_SECTION_DATA = {
 export const ABOUT_SECTION_DATA = {
   title: "ABOUT ME",
   sections: [
-    {
-      title: "Introduction",
-      content:
-        "Hi! I’m Wajiha Mukhtar, a dedicated Frontend Developer with a passion for creating engaging, user-friendly, and innovative web solutions. My expertise includes modern web development tools like HTML, CSS, JavaScript, TypeScript, React, and Next.js, enabling me to bring ideas to life through beautifully designed and fully functional websites.",
-    },
-    {
-      title: "Skills",
-      content:
-        "I am proficient in HTML, CSS, JavaScript, React.js, and Next.js. I specialize in building dynamic, responsive, and accessible web applications using modern frameworks and tools such as Tailwind CSS, Bootstrap, and Material-UI (MUI), ensuring clean design and seamless user experiences.",
-    },
-    {
-      title: "About My Work",
-      content:
-        "As a Frontend Developer, I focus on writing clean, maintainable, and scalable code while ensuring that each project delivers an excellent user experience. I pay great attention to responsive design and performance optimization.",
-    },
+  {
+    title: "Introduction",
+    content:
+      "Hi! I’m Wajiha Mukhtar, a passionate and detail-oriented Frontend Developer committed to creating innovative, user-friendly, and high-performing websites.",
+  },
+  {
+    title: "Skills",
+    content:
+      "I am proficient in HTML, CSS, JavaScript, TypeScript, React.js, and Next.js, with strong expertise in building dynamic, responsive, and accessible web applications. I leverage frameworks and tools such as Tailwind CSS, Bootstrap, and Material-UI (MUI) to deliver clean, professional designs with seamless user experiences.",
+  },
+  {
+    title: "About My Work",
+    content:
+      "As a Frontend Developer, I focus on writing clean, maintainable, and scalable code while ensuring excellent user experiences. I prioritize responsive design, performance optimization, and attention to detail to deliver projects that are both visually appealing and functionally robust.",
+  },
   ],
   styles: {
     mainBox: {

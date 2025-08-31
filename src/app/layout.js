@@ -7,7 +7,7 @@ import { getResponsiveTheme } from "./components/theme/theme";
 import Sidebar from "./components/Sidebar";
 
 export default function RootLayout({ children }) {
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const theme = useMemo(() => getResponsiveTheme(mode), [mode]);
   const toggleMode = () => {
     setMode((prev) => (prev === "light" ? "dark" : "light"));

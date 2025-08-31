@@ -1,4 +1,3 @@
-// components/ThemeToggle.js
 "use client";
 import { IconButton } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";

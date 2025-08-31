@@ -1,4 +1,3 @@
-// components/theme.js
 import { createTheme, responsiveFontSizes } from "@mui/material";
 import { getColors } from "./colors";
 
