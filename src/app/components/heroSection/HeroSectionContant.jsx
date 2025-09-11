@@ -3,7 +3,7 @@ import React from "react";
 import SaveAltOutlinedIcon from "@mui/icons-material/SaveAltOutlined";
 import DynamicButton from "../DynamicButton";
 
-const HeroSectionContant = () => {
+const HeroSectionContant = ({data}) => {
   return (
     <Box sx={{ width: "100%" }}>
       <Typography
@@ -14,7 +14,7 @@ const HeroSectionContant = () => {
           color: theme.palette.text,
         })}
       >
-        Hi! I’m Wajiha Mukhtar
+       {data.title}
       </Typography>
       <Typography
         sx={(theme)=>({
@@ -22,11 +22,10 @@ const HeroSectionContant = () => {
           textAlign: "center",
           paddingY: 2,
           color: theme.palette.heading.color,
-          // textShadow: "0 4px 2px #AD00B1",
         })}
         fontWeight="bold"
       >
-        Frontend Web Developer
+        {data.title2}
       </Typography>
       <Typography
         variant="text"
@@ -39,8 +38,7 @@ const HeroSectionContant = () => {
           justifyContent: "center",
         })}
       >
-        I am a dedicated Web Developer with expertise in HTML, CSS, JavaScript,
-        React.js, and Next.js
+       {data.para}
       </Typography>
       <Box
         sx={{
@@ -75,7 +73,7 @@ const HeroSectionContant = () => {
               borderColor: "#fff",
             },
           }}
-          href="/assets/myResume.pdf"
+          href="/assets/wajiha_cv.pdf"
           download="myResume.pdf"
           endIcon={<SaveAltOutlinedIcon />}
         />

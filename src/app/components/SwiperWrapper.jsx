@@ -36,7 +36,16 @@ const SwiperWrapper = ({ cardData, styles }) => {
           }}
           key={index}
         >
-          <Card sx={styles.cardStyle}>
+          <Card
+            sx={{
+              ...styles.cardStyle, 
+              transition: "all 0.5s ease",
+              "&:hover": {
+                transform: "translateY(-6px)",
+                boxShadow: "0px 8px 20px rgba(0,0,0,0.1)",
+              },
+            }}
+          >
             <Box
               sx={{
                 padding: "1rem",
@@ -50,28 +59,28 @@ const SwiperWrapper = ({ cardData, styles }) => {
               />
             </Box>
             <CardContent>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" }, 
-                    fontWeight: 600,
-                  }}
-                >
-                  {item.title}
-                </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontSize: { xs: "1rem", sm: "1.1rem", md: "1.25rem" },
+                  fontWeight: 600,
+                }}
+              >
+                {item.title}
+              </Typography>
 
-                <Typography
-                  variant="body2"
-                  color="gray"
-                  sx={{
-                    fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.95rem" }, 
-                    lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
-                     minHeight: 50,
-                    height: "auto",
-                  }}
-                >
-                  {item.description}
-                </Typography>
+              <Typography
+                variant="body2"
+                color="gray"
+                sx={{
+                  fontSize: { xs: "0.75rem", sm: "0.85rem", md: "0.95rem" },
+                  lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
+                  minHeight: 50,
+                  height: "auto",
+                }}
+              >
+                {item.description}
+              </Typography>
 
               <Box mt={1}>
                 <DynamicButton

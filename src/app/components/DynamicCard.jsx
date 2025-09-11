@@ -51,19 +51,33 @@ const DynamicCard = ({ cardData, styles, images, icon, colors }) => {
                   component="img"
                   src={images && images[index] ? images[index] : icon[index]}
                   alt="visual"
-                  sx={styles.cardIcon}
+                  sx={{
+                    ...styles.cardIcon,
+                    animation: "bounce 8s ease-in-out infinite",
+                    "@keyframes bounce": {
+                      "0%, 100%": {
+                        transform: "translateY(0)",
+                      },
+                      "50%": {
+                        transform: "translateY(-12px)", // soft bounce
+                      },
+                    },
+                  }}
                 />
               ) : null}
 
-              <Typography variant="h5" fontWeight="bold" sx={(theme)=>({color:theme.palette.heading.color})}>
+              <Typography
+                variant="h5"
+                fontWeight="bold"
+                sx={(theme) => ({ color: theme.palette.heading.color })}
+              >
                 {item.title}
               </Typography>
               <Typography
                 sx={(theme) => ({
-                  fontSize: {xs:"12px",sm:"14px",md:"17px"},
-                  py:1,
-                  color:
-                    theme.palette.mode === "dark" ? "#aaa" : "#666", 
+                  fontSize: { xs: "12px", sm: "14px", md: "17px" },
+                  py: 1,
+                  color: theme.palette.mode === "dark" ? "#aaa" : "#666",
                 })}
               >
                 {item.description}

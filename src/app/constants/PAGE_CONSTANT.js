@@ -113,6 +113,11 @@ export const TAB_DATA = [
     ),
   },
 ];
+export const HERO_SECTION_DATA={
+  title:" Hi! I’m Wajiha Mukhtar",
+  title2:"Frontend Web Developer",
+  para:" I am a dedicated Web Developer with expertise in HTML, CSS, JavaScript, React.js, and Next.js"
+}
 export const SERVICE_SECTION_DATA = {
   title: "MY SERVICES",
   cardData: [
@@ -270,7 +275,7 @@ export const ABOUT_SECTION_DATA = {
       flexDirection: { xs: "column", md: "row" },
       alignItems: "center",
       pl: { xs: 1, md: 0 },
-      pr: { xs: 1, md: 10 },
+      pr: { xs: 1, md: 0,lg:10 },
     },
     imageStyle: {
       display: { xs: "none", md: "flex" },
