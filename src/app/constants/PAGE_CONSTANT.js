@@ -355,13 +355,13 @@ export const PROJECT_SECTION_DATA = {
       "Explore delicious recipes instantly with this Next.js recipe finder.",
       projectLink: "https://recipe-finder-lemon-mu.vercel.app/",
     },
-    {
-      image: "/images/welcome.png",
-      title: "E-commerce",
-      description:
-      "Explore delicious food items with this Next.js e-commerce website.",
-      projectLink: "https://e-commerce-xi-three-10.vercel.app/",
-    },
+    // {
+    //   image: "/images/welcome.png",
+    //   title: "E-commerce",
+    //   description:
+    //   "Explore delicious food items with this Next.js e-commerce website.",
+    //   projectLink: "https://e-commerce-xi-three-10.vercel.app/",
+    // },
     {
       image: "/images/dashboard.png",
       title: "Dashboard",
